@@ -175,6 +175,13 @@ All these are bundled with this plugin, the ones ending with ```.umdl``` should 
         "models": [
             {"sensitivity": 0.5, "model_path": "wake_up.pmdl"}
         ]
+    },
+    "desperta": {
+        "module": "snowboy_ww_plug",
+        "models": [
+            {"sensitivity": 0.5, "model_path": "desperta_jm.pmdl"},
+            {"sensitivity": 0.5, "model_path": "desperta_jm2.pmdl"}
+        ]
     }
   }
 ```

@@ -5,7 +5,7 @@ from setuptools import setup
 PLUGIN_ENTRY_POINT = 'snowboy_ww_plug=jarbas_wake_word_plugin_snowboy:SnowboyHotWord'
 setup(
     name='jarbas-wake-word-plugin-snowboy',
-    version='0.1',
+    version='0.1.1',
     description='Snowboy wake word plugin for mycroft',
     url='https://github.com/JarbasLingua/jarbas-wake-word-plugin-snowboy',
     author='JarbasAi',
