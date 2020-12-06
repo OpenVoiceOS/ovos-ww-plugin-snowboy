@@ -19,11 +19,11 @@ Add the following to your hotwords section in mycroft.conf
   "hotwords": {
     "my_word": {
         "module": "snowboy_ww_plug",
-        "models": {
+        "models": [
             {"sensitivity": 0.5, "model_path": "path/to/first.pmdl"},
             {"sensitivity": 0.5, "model_path": "path/to/second.pmdl"},
             {"sensitivity": 0.5, "model_path": "path/to/third.pmdl"}
-         }
+         ]
     }
   }
 ```
