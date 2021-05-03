@@ -29,9 +29,13 @@ class SnowboyHotWord(HotWordEngine):
         for model in models:
             path = model.get("model_path", key_phrase)
             sensitivity = model.get("sensitivity", 0.5)
-            paths.append(find_model(path))
-            sensitivities.append(sensitivity)
+            if type(sensitivity) == list:
+                sensitivities.extend(sensitivity)
+            else:
+                sensitivities.append(sensitivity)
 
+            paths.append(find_model(path))
+            
         # load snowboy
         self.snowboy = get_detector(paths, sensitivity=sensitivities)
 
