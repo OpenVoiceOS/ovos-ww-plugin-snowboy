@@ -196,7 +196,5 @@ If you want to replace the default mycroft models without changing the wake word
 
 # Training your own wake word
 
-You can train models online by following the instructions here [snowboy](https://github.com/seasalt-ai/snowboy)
+You can train models by following the instructions here [snowboy](https://github.com/seasalt-ai/snowboy)
 It is recomended to use the docker method for ease of use.
-
-Mar. 3rd, 2021
