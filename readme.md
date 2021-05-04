@@ -43,26 +43,30 @@ All these are bundled with this plugin, the ones ending with ```.umdl``` should 
   "hotwords": {
     "alexa": {
         "module": "snowboy_ww_plug",
+        "apply_frontend": true,
         "models": [
-            {"sensitivity": 0.5, "model_path": "alexa.umdl"}
+            {"sensitivity": 0.6, "model_path": "alexa.umdl"}
          ]
     },
     "hey_extreme": {
         "module": "snowboy_ww_plug",
+        "apply_frontend": true,
         "models": [
-            {"sensitivity": 0.5, "model_path": "hey_extreme.umdl"}
+            {"sensitivity": 0.6, "model_path": "hey_extreme.umdl"}
          ]
     },
     "computer": {
         "module": "snowboy_ww_plug",
+        "apply_frontend": true,
         "models": [
-            {"sensitivity": 0.5, "model_path": "computer.umdl"}
+            {"sensitivity": 0.6, "model_path": "computer.umdl"}
          ]
     },
     "jarvis": {
         "module": "snowboy_ww_plug",
+        "apply_frontend": true,
         "models": [
-            {"sensitivity": 0.5, "model_path": "jarvis.umdl"}
+            {"sensitivity": [0.8, 0.8],"model_path": "jarvis.umdl"}
          ]
     },
     "snowboy": {
@@ -79,20 +83,23 @@ All these are bundled with this plugin, the ones ending with ```.umdl``` should 
     },
     "subex": {
         "module": "snowboy_ww_plug",
+        "apply_frontend": true,
         "models": [
             {"sensitivity": 0.5, "model_path": "subex.umdl"}
          ]
     },
     "neoya": {
         "module": "snowboy_ww_plug",
+        "apply_frontend": true,
         "models": [
-              {"sensitivity": 0.5, "model_path": "neoya.umdl"}
+              {"sensitivity": [0.7, 0.7], "model_path": "neoya.umdl"}
          ]
     },
     "view_glass": {
         "module": "snowboy_ww_plug",
+        "apply_frontend": true,
         "models": [
-              {"sensitivity": 0.5, "model_path": "view_glass.umdl"}
+              {"sensitivity": 0.7, "model_path": "view_glass.umdl"}
          ]
     },
     "hey_computer": {
