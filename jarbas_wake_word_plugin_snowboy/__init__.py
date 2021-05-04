@@ -21,6 +21,7 @@ class SnowboyHotWord(HotWordEngine):
         super().__init__(key_phrase, config, lang)
 
         # load models
+        ApplyFrontend = self.config.get("apply_frontend", False)
         models = self.config.get("models") or [{"model_path": key_phrase}]
         if not len(models):
             raise ModelNotFound("config does not include any models!")
@@ -37,7 +38,7 @@ class SnowboyHotWord(HotWordEngine):
             paths.append(find_model(path))
             
         # load snowboy
-        self.snowboy = get_detector(paths, sensitivity=sensitivities)
+        self.snowboy = get_detector(paths, sensitivity=sensitivities, apply_frontend=ApplyFrontend)
 
     def found_wake_word(self, frame_data):
         wake_word = self.snowboy.RunDetection(frame_data)
