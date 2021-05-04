@@ -30,7 +30,7 @@ class SnowboyHotWord(HotWordEngine):
         for model in models:
             path = model.get("model_path", key_phrase)
             sensitivity = model.get("sensitivity", 0.5)
-            if type(sensitivity) == list:
+            if isinstance(sensitivity, list):
                 sensitivities.extend(sensitivity)
             else:
                 sensitivities.append(sensitivity)
@@ -38,7 +38,8 @@ class SnowboyHotWord(HotWordEngine):
             paths.append(find_model(path))
             
         # load snowboy
-        self.snowboy = get_detector(paths, sensitivity=sensitivities, apply_frontend=apply_frontend)
+        self.snowboy = get_detector(paths, sensitivity=sensitivities,
+                                    apply_frontend=apply_frontend)
 
     def found_wake_word(self, frame_data):
         wake_word = self.snowboy.RunDetection(frame_data)
