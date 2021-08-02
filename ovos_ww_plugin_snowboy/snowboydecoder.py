@@ -2,7 +2,7 @@
 import platform
 import os
 import logging
-from jarbas_wake_word_plugin_snowboy.exceptions import ModelNotFound
+from ovos_ww_plugin_snowboy.exceptions import ModelNotFound
 from os.path import isfile, join, expanduser
 
 # create logger

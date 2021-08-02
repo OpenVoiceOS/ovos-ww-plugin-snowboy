@@ -2,16 +2,17 @@
 from setuptools import setup
 
 
-PLUGIN_ENTRY_POINT = 'snowboy_ww_plug=jarbas_wake_word_plugin_snowboy:SnowboyHotWord'
+PLUGIN_ENTRY_POINT = 'ovos-ww-plugin-snowboy=ovos_ww_plugin_snowboy:SnowboyHotWord'
 setup(
-    name='jarbas-wake-word-plugin-snowboy',
-    version='0.1.2',
+    name='ovos-ww-plugin-snowboy',
+    version='0.1.0',
     description='Snowboy wake word plugin for mycroft',
-    url='https://github.com/JarbasLingua/jarbas-wake-word-plugin-snowboy',
+    url='https://github.com/OpenVoiceOS/ovos-ww-plugin-snowboy',
     author='JarbasAi',
     author_email='jarbasai@mailfence.com',
     license='Apache-2.0',
-    packages=['jarbas_wake_word_plugin_snowboy'],
+    packages=['ovos_ww_plugin_snowboy'],
+    install_requires=["ovos-plugin-manager>=0.0.1a7"],
     include_package_data=True,
     zip_safe=True,
     classifiers=[
@@ -31,6 +32,6 @@ setup(
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
     ],
-    keywords='mycroft plugin wake word',
+    keywords='mycroft ovos plugin wake word',
     entry_points={'mycroft.plugin.wake_word': PLUGIN_ENTRY_POINT}
 )

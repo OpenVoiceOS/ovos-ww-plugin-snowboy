@@ -10,10 +10,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-from mycroft.client.speech.hotword_factory import HotWordEngine
-from jarbas_wake_word_plugin_snowboy.snowboydecoder import get_detector, \
+from ovos_plugin_manager.templates.hotwords import HotWordEngine
+from ovos_ww_plugin_snowboy.snowboydecoder import get_detector, \
     find_model
-from jarbas_wake_word_plugin_snowboy.exceptions import ModelNotFound
+from ovos_ww_plugin_snowboy.exceptions import ModelNotFound
 
 
 class SnowboyHotWord(HotWordEngine):
