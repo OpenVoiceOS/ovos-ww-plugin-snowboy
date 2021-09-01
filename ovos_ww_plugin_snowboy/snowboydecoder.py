@@ -17,12 +17,12 @@ if system == "Linux":
     machine = platform.machine()
     LOG.info("Platform: " + machine)
     if machine == "x86_64":
-        from jarbas_wake_word_plugin_snowboy.lib.linux import snowboydetect
+        from ovos_ww_plugin_snowboy.lib.linux import snowboydetect
     elif machine == "armv6l":
         # TODO not sure this is functional!!!
-        from jarbas_wake_word_plugin_snowboy.lib.rpi import snowboydetect
+        from ovos_ww_plugin_snowboy.lib.rpi import snowboydetect
     elif machine == "armv7l":
-        from jarbas_wake_word_plugin_snowboy.lib.rpi import snowboydetect
+        from ovos_ww_plugin_snowboy.lib.rpi import snowboydetect
     else:
         raise ImportError("Machine not supported")
 elif system == "Windows":

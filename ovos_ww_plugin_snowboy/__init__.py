@@ -16,7 +16,7 @@ from ovos_ww_plugin_snowboy.snowboydecoder import get_detector, \
 from ovos_ww_plugin_snowboy.exceptions import ModelNotFound
 
 
-class SnowboyHotWord(HotWordEngine):
+class SnowboyHotWordPlugin(HotWordEngine):
     def __init__(self, key_phrase="hey mycroft", config=None, lang="en-us"):
         super().__init__(key_phrase, config, lang)
 

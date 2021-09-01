@@ -2,10 +2,10 @@
 from setuptools import setup
 
 
-PLUGIN_ENTRY_POINT = 'ovos-ww-plugin-snowboy=ovos_ww_plugin_snowboy:SnowboyHotWord'
+PLUGIN_ENTRY_POINT = 'ovos-ww-plugin-snowboy=ovos_ww_plugin_snowboy:SnowboyHotWordPlugin'
 setup(
     name='ovos-ww-plugin-snowboy',
-    version='0.1.0',
+    version='0.1.1',
     description='Snowboy wake word plugin for mycroft',
     url='https://github.com/OpenVoiceOS/ovos-ww-plugin-snowboy',
     author='JarbasAi',
