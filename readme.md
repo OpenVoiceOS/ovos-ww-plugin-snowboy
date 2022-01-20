@@ -1,5 +1,5 @@
 ## Description
-Mycroft wake word plugin for [Snowboy](https://github.com/seasalt-ai/snowboy)
+Mycroft/OpenVoiceOS wake word plugin for [Snowboy](https://github.com/seasalt-ai/snowboy)
 
 ## Install
 
@@ -37,7 +37,8 @@ Then select what wakeword to use
 
 ### Bundled wakeword models
 
-All these are bundled with this plugin, the ones ending with ```.umdl``` should have a good accuracy, the others are not very accurate and you should tweak the sensitivity
+All these are bundled with this plugin, they are universal models ```.umdl``` trained by snowboy and should have a good accuracy
+
 
 ```json
   "hotwords": {
@@ -101,107 +102,18 @@ All these are bundled with this plugin, the ones ending with ```.umdl``` should 
         "models": [
               {"sensitivity": 0.7, "model_path": "view_glass.umdl"}
          ]
-    },
-    "hey_computer": {
-        "module": "ovos-ww-plugin-snowboy",
-        "models": [
-              {"sensitivity": 0.5, "model_path": "hey_computer.pmdl"},
-              {"sensitivity": 0.5, "model_path": "hey_computer_alt.pmdl"}
-         ]
-    },
-    "hey_neon": {
-        "module": "ovos-ww-plugin-snowboy",
-        "models": [
-            {"sensitivity": 0.5, "model_path": "hey_neon.pmdl"}
-         ]
-    },
-    "hey_device": {
-        "module": "ovos-ww-plugin-snowboy",
-        "models": [
-            {"sensitivity": 0.5, "model_path": "hey_device.pmdl"}
-         ]
-    },
-    "hey_dexter": {
-        "module": "ovos-ww-plugin-snowboy",
-        "models": [
-            {"sensitivity": 0.5, "model_path": "hey_dexter.pmdl"}
-         ]
-    },
-    "dexter": {
-        "module": "ovos-ww-plugin-snowboy",
-        "models": [
-            {"sensitivity": 0.5, "model_path": "dexter.pmdl"}
-         ]
-    },
-    "ó_computador": {
-        "module": "ovos-ww-plugin-snowboy",
-        "models": [
-             {"sensitivity": 0.5, "model_path": "ó_computador.pmdl"}
-         ]
-    },
-    "ó_jarbas": {
-        "module": "ovos-ww-plugin-snowboy",
-        "models": [
-             {"sensitivity": 0.5, "model_path": "ó_jarbas.pmdl"}
-         ]
-    },
-    "ó_sauro": {
-        "module": "ovos-ww-plugin-snowboy",
-        "models": [
-             {"sensitivity": 0.5, "model_path": "ó_sauro.pmdl"}
-         ]
-    },
-    "red_alert": {
-        "module": "ovos-ww-plugin-snowboy",
-        "models": [
-            {"sensitivity": 0.5, "model_path": "red_alert.pmdl"}
-         ]
-    },
-    "thank_you": {
-        "module": "ovos-ww-plugin-snowboy",
-        "models": [
-            {"sensitivity": 0.5, "model_path": "thank_you.pmdl"}
-        ]
-    },
-    "fuck_you": {
-        "module": "ovos-ww-plugin-snowboy",
-        "models": [
-            {"sensitivity": 0.5, "model_path": "fuck_you.pmdl"}
-        ]
-    },
-    "hey_mycroft_snowboy": {
-        "module": "ovos-ww-plugin-snowboy",
-        "models": [
-            {"sensitivity": 0.5, "model_path": "hey_mycroft.pmdl"}
-        ]
-    },
-    "wake_up_snowboy": {
-        "module": "ovos-ww-plugin-snowboy",
-        "models": [
-            {"sensitivity": 0.5, "model_path": "wake_up.pmdl"}
-        ]
-    },
-    "desperta": {
-        "module": "ovos-ww-plugin-snowboy",
-        "models": [
-            {"sensitivity": 0.5, "model_path": "desperta_jm.pmdl"},
-            {"sensitivity": 0.5, "model_path": "desperta_jm2.pmdl"}
-        ]
     }
   }
 ```
 
-If you want to replace the default mycroft models without changing the wake words
-
-```json
- "listener": {
-      "wake_word": "hey_mycroft_snowboy",
-      "stand_up_word": "wake_up_snowboy"
- }
- 
-```
-
 # Training your own wake word
 
-You can train models by following the instructions here [snowboy](https://github.com/seasalt-ai/snowboy)
-It is recomended to use the docker method for ease of use.
+You can spin up a docker container and train your model, this only works in x86
+
+`docker run -it -p 8000:8000 rhasspy/snowboy-seasalt`
+
+then navigate to http://localhost:8000
+
+Alternatively you can use the hosted instance at http://167.172.238.67:8000 and simply download your model  # TODO domain name
+
+[training source code](https://github.com/seasalt-ai/snowboy)
