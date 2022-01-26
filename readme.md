@@ -108,12 +108,12 @@ All these are bundled with this plugin, they are universal models ```.umdl``` tr
 
 # Training your own wake word
 
-You can spin up a docker container and train your model, this only works in x86
+You can use the hosted instance at https://snowboy.2022.us to train and download your model
+
+Alternatively you can spin up a docker container locally, this only works in x86
 
 `docker run -it -p 8000:8000 rhasspy/snowboy-seasalt`
 
 then navigate to http://localhost:8000
-
-Alternatively you can use the hosted instance at http://167.172.238.67:8000 and simply download your model  # TODO domain name
 
 [training source code](https://github.com/seasalt-ai/snowboy)
