@@ -46,9 +46,6 @@ def find_model(model):
     if isfile(model_no_ext + ".umdl"):
         # universal model found
         model = model_no_ext + ".umdl"
-    elif isfile(model_no_ext + ".pmdl"):
-        # personal model found
-        model = model_no_ext + ".pmdl"
     else:
         raise ModelNotFound("could not find " + model)
     return model
