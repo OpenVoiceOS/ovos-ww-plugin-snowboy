@@ -1,8 +1,8 @@
 # Changelog
 
-## [Unreleased](https://github.com/OpenVoiceOS/ovos-ww-plugin-snowboy/tree/HEAD)
+## [V0.1.2a1](https://github.com/OpenVoiceOS/ovos-ww-plugin-snowboy/tree/V0.1.2a1) (2022-02-28)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-ww-plugin-snowboy/compare/0.1.2...HEAD)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-ww-plugin-snowboy/compare/0.1.2...V0.1.2a1)
 
 **Merged pull requests:**
 
