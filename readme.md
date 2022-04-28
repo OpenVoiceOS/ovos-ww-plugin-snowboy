@@ -110,7 +110,7 @@ All these are bundled with this plugin, they are universal models ```.umdl``` tr
 
 You can use the following public instances to train and download your model:
 - https://snowboy.2022.us hosted by [@NeonGeckoCom](https://github.com/NeonGeckoCom)
-- https://snowboy.jarbasai.online/ hosted by [@JarbasAi](https://github.com/JarbasAl)
+- https://snowboy.jarbasai.online hosted by [@JarbasAi](https://github.com/JarbasAl)
 
 Alternatively you can spin up a docker container locally, this only works in x86
 
